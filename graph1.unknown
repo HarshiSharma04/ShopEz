@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Assuming your data is in a CSV file named 'data.csv'
+data = pd.read_csv('Supermarket_products.csv')
+
+# Plot
+
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='category', y='sale_price', data=data, palette='Set2')
+plt.title('Distribution of Sale Prices by Category')
+plt.xlabel('Category')
+plt.ylabel('Sale Price')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
